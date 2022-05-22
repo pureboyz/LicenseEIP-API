@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="pw.pureboyz.mapper.EIPMapper">
+
+    <select id="SelectQuestionList" parameterType="QuestionVO" resultType="org.json.simple.JSONObject">
+        SELECT
+        	 T1.QUESTION_ID
+        	,T1.ROUND
+        	,T1.CHAPTER
+        	,T1.QUESTION
+        	,T1.USE_IMAGE
+        	,T1.IMAGE_PATH
+        	,DATE_FORMAT(T1.CREATE_DATE, '%Y-%m-%d') AS CREATE_DATE
+        	,DATE_FORMAT(T1.UPDATE_DATE, '%Y-%m-%d') AS UPDATE_DATE
+        	,DATE_FORMAT(T1.DELETE_DATE, '%Y-%m-%d') AS DELETE_DATE
+        FROM
+        	 QUESTION T1
+        WHERE 1=1
+        	AND T1.ROUND = #{round}
+    </select>
+    
+</mapper>
