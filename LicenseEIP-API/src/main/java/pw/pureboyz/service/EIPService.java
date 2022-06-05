@@ -18,5 +18,10 @@ public class EIPService
 	{
 		return eipMapper.SelectQuestionList(questionVO);
 	}
+
+	public List<JSONObject> SelectRoundList()
+	{
+		return eipMapper.SelectRoundList();
+	}
 	
 }

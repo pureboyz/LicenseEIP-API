@@ -29,4 +29,16 @@
 	     ) T2
     </select>
     
+    <select id="SelectRoundList" resultType="org.json.simple.JSONObject">
+    	SELECT
+    		 T1.ROUND
+    		,CONCAT( SUBSTRING(T1.ROUND, 1, INSTR(T1.ROUND, '_')-1), '년 ', SUBSTRING(T1.ROUND, INSTR(T1.ROUND, '_')+1), '회' ) AS ROUND_NAME
+    	FROM
+    		QUESTION T1
+    	GROUP BY
+    		T1.ROUND
+    	ORDER BY
+    		T1.ROUND ASC
+    </select>
+    
 </mapper>

@@ -11,4 +11,6 @@ import pw.pureboyz.vo.QuestionVO;
 public interface EIPMapper
 {
 	List<JSONObject> SelectQuestionList(QuestionVO questionVO);
+
+	List<JSONObject> SelectRoundList();
 }

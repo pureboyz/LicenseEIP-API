@@ -18,7 +18,12 @@ public class EIPController
 	@RequestMapping("/SelectQuestionList")
 	public List<JSONObject> ServiceQuestionList(QuestionVO questionVO)
 	{
-		List<JSONObject> questionList = eipService.SelectQuestionList(questionVO);
-		return questionList;
+		return eipService.SelectQuestionList(questionVO);
+	}
+	
+	@RequestMapping("/SelectRoundList")
+	public List<JSONObject> SelectRoundList()
+	{
+		return eipService.SelectRoundList();
 	}
 }
