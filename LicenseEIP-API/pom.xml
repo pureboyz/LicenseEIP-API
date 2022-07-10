@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>pw.pureboyz</groupId>
 	<artifactId>LicenseEIP-API</artifactId>
-	<version>20220605-001</version>
+	<version>20220710-001</version>
 	<packaging>war</packaging>
 	<name>LicenseEIP-API</name>
 	<description>LicenseEIP-API</description>
